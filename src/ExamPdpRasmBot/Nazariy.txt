@@ -1,0 +1,26 @@
+1-savol  LOH.
+
+Zaryadim qomadi qisqa qisqa yozaman.
+LOH bu heap xotirani ichidagi 3ga bo'lingan qismidan 2-si, bu yerda gen2 saqlanadi , 
+Lohdan oldin Soh bor u yerda ham gen2 bor lekin bular boshqa boshqa, farqlari keladigan object kattaligiga qarab
+masalan 100mb kompyuter xotirasiga qarab, lohning minusi bor , bu yerda Garbage collector genlarni 3ga bo'lib tekshiradiku
+mark sweat  compact qilib , bu yerda compact bo'lmas ekan , shuning uchun Lohdan ehtiyot bo'lish kerak,
+
+2-savol Streamlar
+
+Stream bu shunchaki ma'lumotlar oqimi, bu oqimlar orqali biz ma'lumotlarni o'qishimiz yoki yozishimiz mumkin,
+masalan fayl oqimi, bu oqim orqali biz faylga ma'lumot yozishimiz yoki o'qishimiz mumkin,
+yoki tarmoqli oqim, bu oqim orqali biz tarmoq orqali ma'lumotlarni yuborishimiz yoki qabul qilishimiz mumkin,
+sreamlarda Garbage collector avtomatik ishlamaydi - biz bu uchun using kalit so'zini ishlatishimiz kerak , 
+va o'zi dispose qilib streamni yopadi va bizning projectda qilganimizda using qilolmagan edik , chunki COntrollerBaseda
+FIle degan statik metodini  ozi streamlarni yopib yuboradi, e xullas shu 5% qoldi
+
+3-savol Extension methodlar
+
+Extension methodlar bu shunchaki mavjud classlarga yangi metodlar qo'shish imkonini beruvchi metodlardir,
+va bu Open Closed prinsiipga mos keladi,
+Bu nima degani bizda classlar bor , biz ularning ichiga kod yozmasdan ya'ni o'zgartirmasdan yangi statik class ochib ichiga 
+statik method yozamiz bizga kerak bo'lgan ishni qiladigan methodni , xo'sh bizni class bu method o'ziniki ekanini qanday biladi 
+biz osha statik metodning parameterini ichiga osha classni this kalit so'zi bilan yozamiz,
+shunda bu method o'sha classning methodi bo'lib qoladi va biz uni chaqirganimizda o'sha classning methodi sifatida keladi,
+Xullas shu 
