@@ -34,7 +34,7 @@ namespace ExamPdpRasmBot.Data
 
 
 
-        // Pexels API'dan rasmlarni olish
+        
         public static async Task<List<string>> GetImagesByKeyword(string keyword)
         {
             var images = new List<string>();
